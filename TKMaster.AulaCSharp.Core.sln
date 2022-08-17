@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{AB64770B-93D5-49CC-9AAC-34E49B37A93F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Service", "1 - Service", "{9BF5B17A-8480-42D9-A3D1-29391A7236EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{8CEA629C-BA9D-4A81-B60B-18E7D6218006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{859316C0-F612-4510-9D6E-5CFE9945F36F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1 - Data", "3.1 - Data", "{EB80F719-3A0B-403D-8DB0-B809A36BAFB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2 - CrossCutting", "3.2 - CrossCutting", "{D9BBAB5E-1C2C-40DE-8AB8-706B703762F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKMaster.AulaCSharp.Core.Domain", "src\TKMaster.AulaCSharp.Core.Domain\TKMaster.AulaCSharp.Core.Domain.csproj", "{9F8DEB19-0AFD-4E03-AD1A-F71FF07EE0BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKMaster.AulaCSharp.Core.Data", "src\TKMaster.AulaCSharp.Core.Data\TKMaster.AulaCSharp.Core.Data.csproj", "{68CD9E93-E947-4553-BE9E-C5912C542673}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F8DEB19-0AFD-4E03-AD1A-F71FF07EE0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8DEB19-0AFD-4E03-AD1A-F71FF07EE0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8DEB19-0AFD-4E03-AD1A-F71FF07EE0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8DEB19-0AFD-4E03-AD1A-F71FF07EE0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CD9E93-E947-4553-BE9E-C5912C542673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CD9E93-E947-4553-BE9E-C5912C542673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CD9E93-E947-4553-BE9E-C5912C542673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CD9E93-E947-4553-BE9E-C5912C542673}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB80F719-3A0B-403D-8DB0-B809A36BAFB3} = {859316C0-F612-4510-9D6E-5CFE9945F36F}
+		{D9BBAB5E-1C2C-40DE-8AB8-706B703762F2} = {859316C0-F612-4510-9D6E-5CFE9945F36F}
+		{9F8DEB19-0AFD-4E03-AD1A-F71FF07EE0BB} = {8CEA629C-BA9D-4A81-B60B-18E7D6218006}
+		{68CD9E93-E947-4553-BE9E-C5912C542673} = {EB80F719-3A0B-403D-8DB0-B809A36BAFB3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCE7F4FE-998B-4C27-9006-6505FB60AE00}
+	EndGlobalSection
+EndGlobal
