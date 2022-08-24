@@ -4,3 +4,4 @@ Projeto de ensino para iniciantes da linguagem C#, Web API com Swagger Front-End
 
 - Adicionei o arquivo chamado .gitignore e o Readme,md
 - Contém a solution e os dois projetos de Domain e Data.
+- Criação do projeto WebApi para configuração da string de conexão de banco
