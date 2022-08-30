@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using TKMaster.AulaCSharp.Core.WebApi.Configurations;
 
 namespace TKMaster.AulaCSharp.Core.WebApi
 {
@@ -30,15 +31,53 @@ namespace TKMaster.AulaCSharp.Core.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDependencyInjectionConfiguration();
+
+            services.AddDatabaseConfiguration(Configuration);
+
+            services.AddSwaggerGen(); // Tive adicionar isto para correção do erro da tela
 
             services.AddMvc();
         }
-               
-        public void Configure(IApplicationBuilder app)
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment webHost)
         {
-            // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        } 
-        
+            if (webHost.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Projeto de Ensino Core WebApi v1"));
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseRouting();
+
+            app.UseCookiePolicy();
+
+            app.UseCors
+             (
+                 c =>
+                 {
+                     c.AllowAnyOrigin();
+                     c.AllowAnyHeader();
+                     c.AllowAnyMethod();
+                 }
+             );
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("../swagger/v1/swagger.json", "Projeto de Ensino Core WebApi v1");
+                s.RoutePrefix = "";
+            });
+        }
+
         #endregion
     }
 }
