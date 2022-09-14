@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Notifications\" />
+    <ProjectReference Include="..\TKMaster.AulaCSharp.Core.Domain\TKMaster.AulaCSharp.Core.Domain.csproj" />
   </ItemGroup>
 
 </Project>
